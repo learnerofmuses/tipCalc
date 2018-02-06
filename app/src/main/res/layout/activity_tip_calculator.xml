@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tipcalculator.TipCalculator">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/titleView"
+        android:ems="5"
+        android:inputType="numberDecimal"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/Bill"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/Bill"
+        android:layout_toStartOf="@+id/Bill"
+        android:textSize="25sp"
+        android:text="@string/UserInput"
+        android:textColor="#000000"/>
+    <TextView
+        android:id="@+id/SecondTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView"
+        android:text="@string/SecondUserInput"
+        android:textColor="#000000"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/costOfDiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/textView"
+        android:ems="3"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/mathCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/costOfDiner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/costOfDiner"
+        android:onClick="buttonPressed"
+        android:text="@string/button_label" />
+
+    <TextView
+        android:id="@+id/owedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mathCalc"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mathCalc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="You Owe:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/costOfDiner"
+        android:text="@string/output"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/costOfDiner"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/barLabeling"
+        android:text="0"
+        android:textSize="20sp"
+        android:layout_below="@+id/resultView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+
+    <SeekBar
+        android:id="@+id/SeekB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@id/costOfDiner"
+        android:layout_alignRight="@id/costOfDiner"
+        android:layout_below="@+id/barLabeling"/>
+
+    <CheckBox
+        android:id="@+id/split"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@id/mathCalc"
+        android:text=" Spliting the bill?" />
+
+    <TextView
+        android:id="@+id/outputView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outputView"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/ServiceBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Service1"
+            android:buttonTint="0000FF"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/ServiceBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Service2"
+            android:buttonTint="#0000FF"/>
+        <RadioButton
+            android:id="@+id/ServiceBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Service3"
+            android:buttonTint="#0000FF"/>
+    </RadioGroup>
+
+
+
+</RelativeLayout>

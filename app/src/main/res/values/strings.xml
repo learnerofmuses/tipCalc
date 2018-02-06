@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="button_label">Pay Bill</string>
+    <string name="Service1">Great</string>
+    <string name="Service2">Good</string>
+    <string name="Service3">Poor</string>
+    <string name="UserInput">Total Bill: </string>
+    <string name="SecondUserInput"># of diners: </string>
+    <string name="output">tip amount:</string>
+</resources>
